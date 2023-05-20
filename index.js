@@ -92,3 +92,71 @@ btn2.onclick = function () {
 }
 
 
+// bài 3
+btn3.onclick = function () {
+    var name2 = document.getElementById("nameInput").value;
+    var TTN = document.getElementById("TTNInput").value;
+    var SNPT = document.getElementById("SNPTInput").value;
+    var result3 = document.getElementById("result3").value;
+
+
+    var TTT = TTN - 4e+6 - (SNPT * 1.6e+6);
+
+
+    if ( TTT <= 60e+6) {
+        total = TTT * (5 / 100);
+    }else if (TTT >= 61e+6 && TTT <= 120e+6) {  
+        total = TTT * (10 / 100);   
+    }
+    else if (TTT >= 121e+6 && TTT <= 210e+6) {  
+        total = TTT* (15 / 100);   
+    }
+    else if (TTT >= 121e+6 && TTT <= 384e+6) {  
+        total = TTT * (20 / 100);   
+    }
+    else if (TTT >= 385e+6 && TTT <= 624e+6) { 
+        total = TTT * (25 / 100);    
+    }
+    else if (TTT >= 625e+6 && TTT <= 960e+6) {  
+        total = TTT * (30 / 100);  
+    }else {
+        total = TTT * (35 / 100);
+    }
+
+    document.getElementById("result3").innerHTML = total + ' vnđ';
+
+
+}
+
+
+// bài 4
+btn4.onclick = function () {
+    
+    var MKH = document.getAnimations("MKHInput").value;
+    var sokenh = document.getElementById("sokenhInput").value;
+    var soketnoi = document.getElementById("soketnoiInput").value;
+    var LK = document.getElementById("loaikhach").value;
+    var ND = document.getElementById("NDInput").value;
+    var DN = document.getElementById("DNInput").value;
+
+    
+    phixuly = 4.5;
+    phidv = 20.5;
+    kenhcc = 7.5 * sokenh;
+
+    // phixuly1 = 15
+    // if (soketnoi <= 10) {
+    //    phidv1 = 75
+    // }else {
+    //    phidv1 = 75 + (soketnoi - 10) * 5;
+    // }
+    // kenhcc1 = 50 * sokenh;
+
+    if (LK === ND) {
+        total = phixuly + phidv + kenhcc;
+    }else if (LK === DN) {
+        total = phixuly + phidv + kenhcc;
+    }
+    
+    document.getElementById("result4").innerHTML ='$' + total ;
+}
