@@ -1,15 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
     <h2 style="padding-top: 50px;">BÀI 1: QUẢN LÝ TUYỂN SINH</h2>
-    <div>
-        <input id="benchmaksInput" type="number" placeholder="Điểm chuẩn">
+    <div style="background-color: aquamarine; padding-top: 20px; width: 975px; border-style: solid">
+        <input id="benchmaksInput" type="number" placeholder="Điểm chuẩn" style="margin-left: 15px;">
         <input id="subject1Input" type="number" placeholder="Môn 1">
         <input id="subject2Input" type="number" placeholder="Môn 2">
         <input id="subject3Input" type="number" placeholder="Môn 3">
@@ -28,7 +30,7 @@
             <option value="0">Không</option>
         </select>
         <button id="btnSubmit">Kiểm tra</button>
-        <p>
+        <p style="margin-left: 15px;">
             Kết quả: <span id="result1"></span>
         </p>
     </div>
@@ -37,43 +39,50 @@
 
 
     <h2 style="padding-top: 50px;">BÀI 2: TÍNH TIỀN ĐIỆN</h2>
-    <input id="nameInput" type="text" placeholder="Nhập họ và tên">
-    <input id="kwInput" type="number" placeholder="số kw">
-    <button  id="btn2">Tính tiền điện</button>
-    <p>
-        Tiền điện: <span id="result2"></span>
-    </p>
+    <div style="background-color: aquamarine; padding-top: 20px; width: 470px; border-style: solid">
+        <input id="nameInput" type="text" placeholder="Nhập họ và tên" style="margin-left: 15px;">
+        <input id="kwInput" type="number" placeholder="số kw">
+        <button id="btn2">Tính tiền điện</button>
+        <p style="margin-left: 15px;">
+            Tiền điện: <span id="result2"></span>
+        </p>
 
+    </div>
 
 
     <h2 style="padding-top: 50px;">BÀI 3: TÍNH THUẾ THU NHẬP CÁ NHÂN</h2>
-    <input id="name2Input" type="text" placeholder="Nhập họ và tên">
-    <input id="TTNInput" type="number" placeholder="Tổng thu nhập năm">
-    <input id="SNPTInput" type="number" placeholder="Số người phụ thuộc">
-    <button id="btn3">Tính tiền thuế</button>
-    <p>
-        Thành tiền: <span id="result3"></span>
-    </p>
+    <div style="background-color: aquamarine; padding-top: 20px; width: 650px; border-style: solid">
+        <input id="name2Input" type="text" placeholder="Nhập họ và tên" style="margin-left: 15px;">
+        <input id="TTNInput" type="number" placeholder="Tổng thu nhập năm">
+        <input id="SNPTInput" type="number" placeholder="Số người phụ thuộc">
+        <button id="btn3">Tính tiền thuế</button>
+        <p style="margin-left: 15px;">
+            Thành tiền: <span id="result3"></span>
+        </p>
+    </div>
 
 
 
 
     <h2 style="padding-top: 50px;">BÀI 4: TÍNH TIỀN CÁP</h2>
-    <select id="loaikhach">
-        <option value="w">Chọn loại khách hàng</option>
-        <option value="1">Nhà dân</option>
-        <option value="2">Doanh nghiêp</option>
-    </select>
-    <input id="MKHInput" type="text" placeholder="Nhập mã khách hàng">
-    <input id="sokenhInput" type="number" placeholder="Số kênh cao cấp">
-    <input id="soketnoiInput" type="number" placeholder="Số kết nối của DN">
-    <button id="btn4">Tính tiền cáp</button>
-    <p>
-        Thành tiền: <span id="result4"></span>
-    </p>
+    <div style="background-color: aquamarine; padding-top: 20px; width: 800px; border-style: solid">
+        <select id="loaikhach" style="margin-left: 15px;">
+            <option value="w">Chọn loại khách hàng</option>
+            <option value="1">Nhà dân</option>
+            <option value="2">Doanh nghiêp</option>
+        </select>
+        <input id="MKHInput" type="text" placeholder="Nhập mã khách hàng">
+        <input id="sokenhInput" type="number" placeholder="Số kênh cao cấp">
+        <input id="soketnoiInput" type="number" placeholder="Số kết nối của DN">
+        <button id="btn4">Tính tiền cáp</button>
+        <p style="margin-left: 15px;">
+            Thành tiền: <span id="result4"></span>
+        </p>
+    </div>
 
-    
+
 
     <script src="./index.js"></script>
-</body> 
+</body>
+
 </html>

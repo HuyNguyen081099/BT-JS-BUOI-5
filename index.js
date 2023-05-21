@@ -123,6 +123,7 @@ btn3.onclick = function () {
     } else {
         total = TTT * (35 / 100);
     }
+    
     total = new Intl.NumberFormat("vn-VN").format(total) + " VNĐ";
 
     document.getElementById("result3").innerHTML = total;
