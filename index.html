@@ -7,12 +7,12 @@
     <title>Document</title>
 </head>
 <body>
-    <h2>BÀI 1: QUẢN LÝ TUYỂN SINH</h2>
+    <h2 style="padding-top: 50px;">BÀI 1: QUẢN LÝ TUYỂN SINH</h2>
     <div>
-        <input id="benchmaksInput" type="text" placeholder="Điểm chuẩn">
-        <input id="subject1Input" type="text" placeholder="Môn 1">
-        <input id="subject2Input" type="text" placeholder="Môn 2">
-        <input id="subject3Input" type="text" placeholder="Môn 3">
+        <input id="benchmaksInput" type="number" placeholder="Điểm chuẩn">
+        <input id="subject1Input" type="number" placeholder="Môn 1">
+        <input id="subject2Input" type="number" placeholder="Môn 2">
+        <input id="subject3Input" type="number" placeholder="Môn 3">
         <select id="areaSelect">
             <option>Khu vực</option>
             <option value="A">A</option>
@@ -36,7 +36,7 @@
 
 
 
-    <h2>BÀI 2: TÍNH TIỀN ĐIỆN</h2>
+    <h2 style="padding-top: 50px;">BÀI 2: TÍNH TIỀN ĐIỆN</h2>
     <input id="nameInput" type="text" placeholder="Nhập họ và tên">
     <input id="kwInput" type="number" placeholder="số kw">
     <button  id="btn2">Tính tiền điện</button>
@@ -46,9 +46,9 @@
 
 
 
-    <h2>BÀI 3: TÍNH THUẾ THU NHẬP CÁ NHÂN</h2>
+    <h2 style="padding-top: 50px;">BÀI 3: TÍNH THUẾ THU NHẬP CÁ NHÂN</h2>
     <input id="name2Input" type="text" placeholder="Nhập họ và tên">
-    <input id="TTNInput" type="text" placeholder="Tổng thu nhập năm">
+    <input id="TTNInput" type="number" placeholder="Tổng thu nhập năm">
     <input id="SNPTInput" type="number" placeholder="Số người phụ thuộc">
     <button id="btn3">Tính tiền thuế</button>
     <p>
@@ -58,15 +58,15 @@
 
 
 
-    <h2>BÀI 4: TÍNH TIỀN CÁP</h2>
+    <h2 style="padding-top: 50px;">BÀI 4: TÍNH TIỀN CÁP</h2>
     <select id="loaikhach">
-        <option>Chọn loại khách hàng</option>
-        <option id="NDInput">Nhà dân</option>
-        <option id="DNInput">Doanh nghiêp</option>
+        <option value="w">Chọn loại khách hàng</option>
+        <option value="1">Nhà dân</option>
+        <option value="2">Doanh nghiêp</option>
     </select>
     <input id="MKHInput" type="text" placeholder="Nhập mã khách hàng">
     <input id="sokenhInput" type="number" placeholder="Số kênh cao cấp">
-    <input id="soketnoiInput" type="number" placeholder="Số kết nối của doanh nghiệp">
+    <input id="soketnoiInput" type="number" placeholder="Số kết nối của DN">
     <button id="btn4">Tính tiền cáp</button>
     <p>
         Thành tiền: <span id="result4"></span>

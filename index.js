@@ -14,7 +14,7 @@ function calcAreaGrade(area) {
 }
 
 // tham só: type   trả ra: điểm
-function calcTypeGrade(type) { 
+function calcTypeGrade(type) {
     if (type === "1") {
         return 2.5;
     }
@@ -44,7 +44,7 @@ btnSubmit.onclick = function exercise1() {
 
     // tính tổng điểm
     var total = subject1 + subject2 + subject3 + areaGrade + typeGrade;
-    
+
 
     // check kết quả
     if (
@@ -54,11 +54,11 @@ btnSubmit.onclick = function exercise1() {
         subject3 !== 0
     ) {
         total = "Tổng điểm: " + (subject1 + subject2 + subject3 + areaGrade + typeGrade) + "==> Đậu";
-       
-    }else {
-        
+
+    } else {
+
         total = "Tổng điểm: " + (subject1 + subject2 + subject3 + areaGrade + typeGrade) + "==> Rớt";
- 
+
     }
     document.getElementById("result1").innerHTML = total;
 
@@ -76,19 +76,20 @@ btn2.onclick = function () {
     var result2 = document.getElementById("result2").value;
 
 
-    if (kw <= 50){
+    if (kw <= 50) {
         total = kw * 500;
-    }else if (kw > 50 && kw <= 100){
+    } else if (kw > 50 && kw <= 100) {
         total = kw * 650;
-    }else if (kw > 100 && kw <= 200){
+    } else if (kw > 100 && kw <= 200) {
         total = kw * 850;
-    }else  if (kw > 200 && kw <= 350){
+    } else if (kw > 200 && kw <= 350) {
         total = kw * 1100;
-    }else {
+    } else {
         total = kw * 1300;
     }
- 
-    document.getElementById("result2").innerHTML = total + " vnđ";
+    total = new Intl.NumberFormat("vn-VN").format(total) + " VNĐ";
+
+    document.getElementById("result2").innerHTML = total;
 }
 
 
@@ -103,27 +104,28 @@ btn3.onclick = function () {
     var TTT = TTN - 4e+6 - (SNPT * 1.6e+6);
 
 
-    if ( TTT <= 60e+6) {
+    if (TTT <= 60e+6) {
         total = TTT * (5 / 100);
-    }else if (TTT >= 61e+6 && TTT <= 120e+6) {  
-        total = TTT * (10 / 100);   
+    } else if (TTT >= 61e+6 && TTT <= 120e+6) {
+        total = TTT * (10 / 100);
     }
-    else if (TTT >= 121e+6 && TTT <= 210e+6) {  
-        total = TTT* (15 / 100);   
+    else if (TTT >= 121e+6 && TTT <= 210e+6) {
+        total = TTT * (15 / 100);
     }
-    else if (TTT >= 121e+6 && TTT <= 384e+6) {  
-        total = TTT * (20 / 100);   
+    else if (TTT >= 121e+6 && TTT <= 384e+6) {
+        total = TTT * (20 / 100);
     }
-    else if (TTT >= 385e+6 && TTT <= 624e+6) { 
-        total = TTT * (25 / 100);    
+    else if (TTT >= 385e+6 && TTT <= 624e+6) {
+        total = TTT * (25 / 100);
     }
-    else if (TTT >= 625e+6 && TTT <= 960e+6) {  
-        total = TTT * (30 / 100);  
-    }else {
+    else if (TTT >= 625e+6 && TTT <= 960e+6) {
+        total = TTT * (30 / 100);
+    } else {
         total = TTT * (35 / 100);
     }
+    total = new Intl.NumberFormat("vn-VN").format(total) + " VNĐ";
 
-    document.getElementById("result3").innerHTML = total + ' vnđ';
+    document.getElementById("result3").innerHTML = total;
 
 
 }
@@ -131,32 +133,35 @@ btn3.onclick = function () {
 
 // bài 4
 btn4.onclick = function () {
-    
+
     var MKH = document.getAnimations("MKHInput").value;
     var sokenh = document.getElementById("sokenhInput").value;
     var soketnoi = document.getElementById("soketnoiInput").value;
     var LK = document.getElementById("loaikhach").value;
-    var ND = document.getElementById("NDInput").value;
-    var DN = document.getElementById("DNInput").value;
 
-    
-    phixuly = 4.5;
-    phidv = 20.5;
-    kenhcc = 7.5 * sokenh;
 
-    // phixuly1 = 15
-    // if (soketnoi <= 10) {
-    //    phidv1 = 75
-    // }else {
-    //    phidv1 = 75 + (soketnoi - 10) * 5;
-    // }
-    // kenhcc1 = 50 * sokenh;
+    if (LK === "1") {
+        phixuly = 4.5;
+        phidv = 20.5;
+        kenhcc = 7.5 * sokenh;
+    } else if (LK === "2") {
+        phixuly = 15
+        if (soketnoi <= 10) {
+            phidv = 75
+        } else {
+            phidv = 75 + (soketnoi - 10) * 5;
+        }
+        kenhcc = 50 * sokenh;
 
-    if (LK === ND) {
-        total = phixuly + phidv + kenhcc;
-    }else if (LK === DN) {
-        total = phixuly + phidv + kenhcc;
     }
     
-    document.getElementById("result4").innerHTML ='$' + total ;
+    var total = phixuly + phidv + kenhcc;
+
+
+    total = new Intl.NumberFormat("en-US", {
+        style: "currency",
+        currency: "USD",
+    }).format(total);
+
+    document.getElementById("result4").innerHTML = total;
 }
