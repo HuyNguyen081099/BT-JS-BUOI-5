@@ -1,8 +1,8 @@
 
-// tham số: area  trả ra: điểm
+// bài 1
 function calcAreaGrade(area) {
     if (area === "A") {
-        return 2;  // khi gặp lệnh return thì function coi như xong, toàn bộ code nằm dưới return ẽ không được thực thi
+        return 2;
     }
     if (area === "B") {
         return 1;
@@ -13,7 +13,7 @@ function calcAreaGrade(area) {
     return 0;
 }
 
-// tham só: type   trả ra: điểm
+
 function calcTypeGrade(type) {
     if (type === "1") {
         return 2.5;
@@ -26,7 +26,7 @@ function calcTypeGrade(type) {
     }
 }
 btnSubmit.onclick = function exercise1() {
-    // lấy input
+   
     var benchmarks = +document.getElementById("benchmaksInput").value;
     var subject1 = +document.getElementById("subject1Input").value;
     var subject2 = +document.getElementById("subject2Input").value;
@@ -37,16 +37,16 @@ btnSubmit.onclick = function exercise1() {
     var btnSubmit = document.getElementById("btnSubmit").value;
 
 
-    // tính điểm khu vực
+   
     var areaGrade = calcAreaGrade(areaVal)
-    // tính điểm đối tượng
+    
     var typeGrade = calcTypeGrade(typeVal)
 
-    // tính tổng điểm
+   
     var total = subject1 + subject2 + subject3 + areaGrade + typeGrade;
 
 
-    // check kết quả
+   
     if (
         total >= benchmarks &&
         subject1 !== 0 &&
